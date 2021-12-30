@@ -7,31 +7,31 @@ html { font-family: 'Inter', sans-serif; }
 
 /* setting up some default layouts and colors with CSS variables */
 :root {
-  --page-back: #ffffff;
-  --page-fore: #111118;
+  --page-back: #EDEDED;
+  --page-fore: #161616;
   --page-font-size: 24px;
 
   --section-pad: 120px;
-  --section-border: #f8f8f8;
+  --section-border: #E2E2E2;
   --section-height: 100vh;
 
   --form-width: 240px;
-  --form-back: #111118;
-  --form-fore: #ffffff;
-  --form-border: #66666a;
+  --form-back: #161616;
+  --form-fore: #EDEDED;
+  --form-border: #DBDBDB;
 }
 
 /* dark mode css variables! */
 @media (prefers-color-scheme: dark) {
   :root {
-    --page-back: #111118;
-    --page-fore: #ffffff;
+    --page-back: #161616;
+    --page-fore: #EDEDED;
 
-    --section-border: #33333a;
+    --section-border: #343434;
 
-    --form-back: #ffffff;
-    --form-fore: #111118;
-    --form-border: #dddddd;
+    --form-back: #EDEDED;
+    --form-fore: #161616;
+    --form-border: #3E3E3E;
   }
 }
 
@@ -79,7 +79,7 @@ header {
   z-index: 1;
 
   /* invert text */
-  color: #ffffff;
+  color: #EDEDED;
   mix-blend-mode: difference;
 }
 
