@@ -5,35 +5,19 @@ html { font-family: 'Inter', sans-serif; }
   html { font-family: 'Inter var', sans-serif; }
 }
 
+@import "@radix-ui/colors/gray.css";
+@import "@radix-ui/colors/grayDark.css";
+
+
+
 /* setting up some default layouts and colors with CSS variables */
 :root {
-  --page-back: #EDEDED;
-  --page-fore: #161616;
   --page-font-size: 24px;
-
   --section-pad: 120px;
-  --section-border: #E2E2E2;
   --section-height: 100vh;
-
   --form-width: 240px;
-  --form-back: #161616;
-  --form-fore: #EDEDED;
-  --form-border: #DBDBDB;
 }
 
-/* dark mode css variables! */
-@media (prefers-color-scheme: dark) {
-  :root {
-    --page-back: #161616;
-    --page-fore: #EDEDED;
-
-    --section-border: #343434;
-
-    --form-back: #EDEDED;
-    --form-fore: #161616;
-    --form-border: #3E3E3E;
-  }
-}
 
 /* mobile friendly layout */
 @media (max-width: 640px) {
@@ -66,8 +50,8 @@ body {
   font-variation-settings: "wght" 300;
   line-height: 1.25;
 
-  background-color: var(--page-back);
-  color: var(--page-fore);
+  background-color: var(--gray1);
+  color: var(--gray11);
 }
 
 header {
@@ -79,8 +63,8 @@ header {
   z-index: 1;
 
   /* invert text */
-  color: #EDEDED;
-  mix-blend-mode: difference;
+  color: var(--gray12);
+  /* mix-blend-mode: difference; */
 }
 
 h1 {
@@ -88,7 +72,7 @@ h1 {
 }
 
 section {
-  background: var(--page-back);
+  background: var(--gray1);
   padding: var(--section-pad);
   height: var(--section-height);
 
@@ -96,7 +80,7 @@ section {
   align-items: center;
   justify-content: center;
 
-  border-bottom: 1px solid var(--section-border);
+  border-bottom: 1px solid var(--gray6);
 }
 
 section img {
@@ -110,10 +94,11 @@ form {
   bottom: 24px;
   right: 24px;
   max-width: var(--form-width);
+  border: 0.5px solid var(--gray6);
   border-radius: 28px;
 
-  background: var(--form-back);
-  color: var(--form-fore);
+  background: var(--gray3);
+  color: var(--gray11);
   padding: 24px;
 
   display: grid;
@@ -151,14 +136,14 @@ form input {
   font-variation-settings: "wght" 600;
   text-align: right;
 
-  background: var(--form-back);
-  color: var(--form-fore);
-  border: 1px solid var(--form-border);
+  background: var(--gray1);
+  color: var(--gray11);
+  border: 1px solid var(--gray7);
   transition: border-color 0.2s ease-in-out;
 }
 
 form input:focus {
-  border: 1px solid var(--form-fore);
+  border: 1px solid var(--gray8);
   outline: none;
 }
 
@@ -172,8 +157,8 @@ form button {
   grid-area: button;
   appearance: none;
   border: none;
-  background: var(--form-fore);
-  color: var(--form-back);
+  background: var(--gray1);
+  color: var(--gray11);
   font: inherit;
   padding: 12px;
   font-size: 16px;
@@ -184,6 +169,30 @@ form button {
 
 form button:hover {
   background-color: #232323;
+}
+
+.toggle {
+  position: fixed;
+  top: 24px;
+  right: 24px;
+  padding: 12px;
+  border-radius: 8px;
+  font-size: 18px;
+  line-height: 1.2;
+  color: var(--gray12);
+  border: 0.5px solid var(--gray7);
+  background: var(--gray3);
+  cursor: pointer;
+  transition: 200ms ease-in-out;
+  z-index: 100;
+}
+
+.toggle:hover {
+  background: var(--gray4);
+}
+
+.toggle:active {
+  background: var(--gray5);
 }
 
 /* for scroll snapping on larger screens */
