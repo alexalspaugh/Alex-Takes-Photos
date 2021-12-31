@@ -19,6 +19,12 @@ const send = async function (amount) {
   }
 }
 
+if (window.ethereum) {
+  form.classList.add("has-eth")
+} else {
+  alert("Please install a wallet")
+}
+
 form.addEventListener("submit", function (event) {
   event.preventDefault()
 
