@@ -19,17 +19,14 @@ const send = async function (amount) {
   }
 }
 
-if (window.ethereum) {
+// if (window.ethereum) {
   form.classList.add("has-eth")
-} else {
-  alert("Please install a wallet")
-}
+// }
 
 form.addEventListener("submit", function (event) {
   event.preventDefault()
 
   if (window.ethereum) {
-    form.classList.add("has-eth")
     const input = form.querySelector("input")
     send(input.value)
   } else {
