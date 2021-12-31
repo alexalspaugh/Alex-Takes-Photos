@@ -73,6 +73,13 @@ header {
 
 h1 {
   font-variation-settings: "wght" 600;
+  padding-bottom: 4px;
+}
+
+p {
+  font-size: 18px;
+  font-variation-settings: "wght" 400;
+  color: var(--gray11)
 }
 
 section {
@@ -194,6 +201,7 @@ form button:active {
   background: var(--gray3);
   cursor: pointer;
   z-index: 100;
+  height: 40px;
 }
 
 .toggle:hover {
@@ -205,8 +213,13 @@ form button:active {
   background: var(--gray5);
 }
 
-.sun .moon {
-  fill: currentColor;
+.toggle .svg {
+  width: 15px;
+  height: 15px;
+}
+
+.toggle .moon {
+  display: none;
 }
 
 /* for scroll snapping on larger screens */
