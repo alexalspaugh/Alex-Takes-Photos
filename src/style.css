@@ -33,6 +33,10 @@ html { font-family: 'Inter', sans-serif; }
 
     --form-width: 200px;
   }
+
+  p {
+    font-size: 14px;
+  }
 }
 
 /* for fading in the form */
@@ -68,7 +72,7 @@ header {
 
   /* invert text */
   color: var(--gray12);
-  /* mix-blend-mode: difference; */
+  mix-blend-mode: difference;
 }
 
 h1 {
@@ -79,7 +83,8 @@ h1 {
 p {
   font-size: 18px;
   font-variation-settings: "wght" 400;
-  color: var(--gray11)
+  color: var(--gray11);
+  mix-blend-mode: difference;
 }
 
 section {
@@ -220,6 +225,47 @@ form button:hover {
 
 .toggle .moon {
   display: none;
+}
+
+.noEth {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  width: var(--form-width);
+  padding: 24px;
+  background-color: var(--gray2);
+  color: var(--gray11);
+  border: 0.5px solid var(--gray6);
+  border-radius: 28px;
+  display: none;
+  flex-direction: column;
+  justify-content: start;
+  align-items: flex-start;
+  line-height: 1.4;
+}
+
+.noEth p {
+  padding-bottom: 24px;
+}
+
+.noEth a {
+  font-size: 18px;
+  width: 100%;
+  padding: 12px;
+  color: var(--gray11);
+  text-decoration: none;
+  background-color: var(--gray3);
+  border: 0.5px solid var(--gray7);
+  border-radius: 8px;
+  text-align: center;
+  font-variation-settings: "wght" 500;
+  cursor: pointer;
+}
+
+.noEth a:hover {
+  background-color: var(--gray4);
+  color: var(--gray12);
+  border: 0.5px solid var(--gray8);
 }
 
 /* for scroll snapping on larger screens */

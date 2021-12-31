@@ -1,6 +1,7 @@
 const web3 = new Web3(Web3.givenProvider)
 
 const form = document.querySelector("form")
+const noEth = document.querySelector(".noEth")
 
 const send = async function (amount) {
   const accounts = await window.ethereum.request({ method: "eth_requestAccounts" })
@@ -19,9 +20,11 @@ const send = async function (amount) {
   }
 }
 
-// if (window.ethereum) {
+if (window.ethereum) {
   form.classList.add("has-eth")
-// }
+} else {
+  noEth.style.display="flex"
+}
 
 form.addEventListener("submit", function (event) {
   event.preventDefault()
